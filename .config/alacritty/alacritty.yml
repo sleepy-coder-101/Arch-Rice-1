@@ -1,0 +1,134 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator.
+
+env:
+  TERM: alacritty
+
+window:
+  padding:
+    x: 15
+    y: 15
+
+  dynamic_padding: true
+  opacity: 0.8
+
+
+scrolling:
+  history: 10000
+  multiplier: 3
+  faux_multiplier: 3
+
+
+tabspaces: 4
+
+
+font:
+  normal:
+    family: JetBrains Mono
+    style: Regular
+
+  bold:
+    family: JetBrains Mono
+    style: Bold
+  
+  italic:
+    family: JetBrains Mono
+    style: Italic
+
+  bold_italic:
+    family: JetBrains Mono
+    style: Bold Italic
+
+  size: 15.0
+
+  offset:
+    x: 1
+    y: 1
+
+
+custom_cursor_colors: true
+draw_bold_text_with_bright_colors: true
+
+
+# Colors (Dracula)
+colors:
+  primary:
+    background: '0x282a36'
+    foreground: '#f8f8f2'
+ 
+  # Normal colors
+  normal:
+    black:   '0x000000'
+    red:     '0xff5555'
+    green:   '0x50fa7b'
+    yellow:  '0xf1fa8c'
+    blue:    '0xbd93f9'
+    magenta: '0xff79c6'
+    cyan:    '0x8be9fd'
+    white:   '0xbbbbbb'
+ 
+  # Bright colors
+  bright:
+    black:   '0x555555'
+    red:     '0xff5555'
+    green:   '0x50fa7b'
+    yellow:  '0xf1fa8c'
+    blue:    '0xcaa9fa'
+    magenta: '0xff79c6'
+    cyan:    '0x8be9fd'
+    white:   '0xffffff'
+
+  cursor:
+    text: CellBackground
+    cursor: CellForeground
+      #cursor: '#00ff00'
+      #text: '#ff0000'
+
+  vi_mode_cursor:
+    text: CellBackground
+    cursor: CellForeground
+
+  search:
+    matches:
+      foreground: '#000000'
+      background: '#ffffff'
+    
+    focused_match:
+      foreground: '#ffffff'
+      background: '#000000'
+
+    bar:
+      background: '#c5c8c6'
+      foreground: '#1d1f21'
+
+  hints:
+    start:
+      foreground: '#1d1f21'
+      background: '#e9ff5e'
+
+    end:
+      foreground: '#e9ff5e'
+      background: '#1d1f21'
+
+  line_indicator:
+    foreground: None
+    background: None
+
+  selection:
+    text: CellBackground
+    background: CellForeground
+
+
+cursor:
+  style:
+    shape: Block
+    blinking: On
+
+  blink_interval: 700
+  unfocused_hollow: true
+  thickness: 0.2
+
+live_config_reload: true
+
+  
+mouse:
+  hide_when_typing: true
