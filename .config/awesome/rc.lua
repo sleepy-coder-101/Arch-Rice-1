@@ -251,6 +251,19 @@ awful.keyboard.append_global_keybindings({
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey,           }, "w", function () awful.spawn("firefox") end,
               {description = "open a browser", group = "launcher"}),
+	awful.key({}, "XF86AudioPlay", function() awful.util.spawn("playerctl play-pause", false) end),
+    awful.key({}, "XF86AudioNext", function() awful.util.spawn("playerctl next", false) end),
+    awful.key({}, "XF86AudioPrev", function() awful.util.spawn("playerctl previous", false) end),
+    awful.key({}, "XF86AudioStop", function() awful.util.spawn("playerctl stop", false) end),
+
+    awful.key({}, "XF86AudioRaiseVolume", function () awful.util.spawn("amixer -D pulse sset Master 2%+", false) end),
+	awful.key({}, "XF86AudioLowerVolume", function () awful.util.spawn("amixer -D pulse sset Master 2%-", false) end),
+	awful.key({}, "XF86AudioMute", function () awful.util.spawn("amixer -D pulse sset Master toggle", false) end),
+
+	awful.key({ }, "XF86MonBrightnessUp", function () os.execute("xbacklight -inc 10") end,
+              {description = "+10%", group = "hotkeys"}),
+    awful.key({ }, "XF86MonBrightnessDown", function () os.execute("xbacklight -dec 10") end,
+              {description = "-10%", group = "hotkeys"}),
     awful.key({ modkey,           }, "a", function () awful.util.spawn("rofi -show drun") end,
               {description = "open rofi with DRUN", group = "launcher"}),
               
