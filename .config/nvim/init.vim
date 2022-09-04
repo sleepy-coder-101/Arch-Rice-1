@@ -6,6 +6,7 @@
 :set smarttab
 :set softtabstop=4
 :set mouse=a
+:set rtp +=~/.vim
 
 call plug#begin()
 Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw)
@@ -15,6 +16,8 @@ Plug 'https://github.com/vim-airline/vim-airline' " Status bar
 Plug 'https://github.com/lifepillar/pgsql.vim' " PSQL Pluging needs :SQLSetType pgsql.vim
 Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
 Plug 'Mofiqul/dracula.nvim'
+"Plug 'jacoborus/tender.vim'
+"Plug 'https://github.com/vim-airline/vim-airline-themes'
 "Plug 'https://github.com/neoclide/coc.nvim'  " Auto Completion
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
@@ -36,6 +39,7 @@ nmap <F8> :TagbarToggle<CR>
 :set completeopt-=preview " For No Previews
 
 colorscheme dracula
+"colorscheme tender
 
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
@@ -50,7 +54,7 @@ let g:NERDTreeDirArrowCollapsible="~"
 
 " air-line
 let g:airline_powerline_fonts = 1
-
+"let g:airline_theme='one'
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
@@ -65,4 +69,3 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
 inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
-
